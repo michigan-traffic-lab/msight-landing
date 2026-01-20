@@ -104,7 +104,7 @@
                   <img
                     ref="heroImg"
                     class="h-full w-full object-cover"
-                    src="/assets/hero-city.jpg"
+                    src="assets/hero-city.jpg"
                     alt="MSight concept: AI roadside intelligence at intersections"
                     loading="eager"
                   >

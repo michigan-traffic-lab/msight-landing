@@ -36,7 +36,7 @@
                     <div class="mosaic-grid">
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy1.mp4"
+                        src="assets/deploy1.mp4"
                         muted
                         playsinline
                         autoplay
@@ -45,7 +45,7 @@
                       ></video>
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy2.mp4"
+                        src="assets/deploy2.mp4"
                         muted
                         playsinline
                         autoplay
@@ -54,7 +54,7 @@
                       ></video>
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy3.mp4"
+                        src="assets/deploy3.mp4"
                         muted
                         playsinline
                         autoplay
@@ -63,7 +63,7 @@
                       ></video>
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy4.mp4"
+                        src="assets/deploy4.mp4"
                         muted
                         playsinline
                         autoplay
@@ -72,7 +72,7 @@
                       ></video>
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy5.mp4"
+                        src="assets/deploy5.mp4"
                         muted
                         playsinline
                         autoplay
@@ -81,7 +81,7 @@
                       ></video>
                       <video
                         class="mosaic-video"
-                        src="/assets/deploy6.mp4"
+                        src="assets/deploy6.mp4"
                         muted
                         playsinline
                         autoplay
@@ -98,7 +98,7 @@
                     <div class="tile">
                       <video
                         class="video"
-                        src="/assets/regular.mp4"
+                        src="assets/regular.mp4"
                         muted
                         playsinline
                         autoplay
@@ -115,7 +115,7 @@
                     <div class="tile">
                       <video
                         class="video"
-                        src="/assets/spat1.mp4"
+                        src="assets/spat1.mp4"
                         muted
                         playsinline
                         autoplay
@@ -126,7 +126,7 @@
                     <div class="tile">
                       <video
                         class="video"
-                        src="/assets/spat2.mp4"
+                        src="assets/spat2.mp4"
                         muted
                         playsinline
                         autoplay
@@ -137,7 +137,7 @@
                     <div class="tile">
                       <video
                         class="video"
-                        src="/assets/spat3.mp4"
+                        src="assets/spat3.mp4"
                         muted
                         playsinline
                         autoplay

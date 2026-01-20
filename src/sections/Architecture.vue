@@ -147,7 +147,7 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-
+const asset = (p) => new URL(p.replace(/^\//, ""), import.meta.env.BASE_URL).toString();
 const topics = [
   {
     id: "edgecloud",
@@ -155,7 +155,7 @@ const topics = [
     title: "Edge–cloud Architecture for Roadside Intelligence",
     summary:
       "MSight is an integrated edge–cloud system designed to support a broad spectrum of safety and operational applications, including multi-sensor perception, fusion and tracking, risk assessment, near-miss analysis, V2X messaging, low-latency sensor streaming, and continuous system monitoring—without requiring pipeline redesign across deployments.",
-    image: "/assets/architecture.png",
+    image: asset("/assets/architecture.png"),
     imageAlt: "MSight conceptual edge–cloud architecture",
     cards: [
       {
@@ -201,7 +201,7 @@ const topics = [
     title: "Pub/Sub Core on the Roadside for Flexible, Deployable Pipelines",
     summary:
       "The edge device is built around a publish–subscribe backbone and a “bag of nodes” design, enabling a highly flexible and easily deployable architecture that adapts to diverse field conditions and fully leverages existing roadside configurations.",
-    image: "/assets/pubsub.png",
+    image: asset("/assets/pubsub.png"),
     imageAlt: "MSight pub/sub core and modular node graph",
     cards: [
       {
@@ -239,7 +239,7 @@ const topics = [
     title: "Make Existing Roadside Infrastructure Smart",
     summary:
       "Many intersections already have cameras and control interfaces, but they are often siloed. MSight modernizes and integrates these assets—so agencies can achieve smart functionality by orchestrating what is already deployed, then incrementally expanding capability over time.",
-    image: "/assets/hub.png",
+    image: asset("/assets/hub.png"),
     imageAlt: "MSight integrating existing roadside sensors and facilities",
     cards: [
       {

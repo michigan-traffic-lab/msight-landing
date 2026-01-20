@@ -53,7 +53,7 @@
             <div class="relative aspect-[21/9] w-full">
               <video
                 class="absolute inset-0 h-full w-full object-cover"
-                data-src="/assets/roundabout.mp4"
+                data-src="assets/roundabout.mp4"
                 autoplay
                 muted
                 loop
