@@ -2,7 +2,7 @@
   <section
     id="performance"
     ref="sectionEl"
-    class="mt-24 scroll-mt-24 scroll-page min-h-[100svh] flex items-center"
+    class="mt-24 scroll-mt-24 scroll-page flex items-center"
   >
     <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="glass rounded-[32px] border border-white/10 overflow-hidden">
