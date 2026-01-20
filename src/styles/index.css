@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* --- MSight Design Tokens (University of Michigan palette) --- */
+:root {
+  --um-blue: #00274C;
+  --um-maize: #FFCB05;
+  --ink: #0b1220;
+  --muted: #6b7280;
+  --card: rgba(255,255,255,0.06);
+  --card-border: rgba(255,255,255,0.10);
+  --shadow: 0 40px 120px rgba(0,0,0,0.35);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: radial-gradient(1200px 800px at 20% 10%, rgba(255,203,5,0.18), transparent 55%),
+              radial-gradient(1200px 900px at 85% 30%, rgba(0,39,76,0.40), transparent 60%),
+              linear-gradient(180deg, #040a14, #050b18 30%, #040a14 100%);
+  color: rgba(255,255,255,0.92);
+  overflow-x: hidden;
+}
+
+/* Make each section fill one viewport height and center content */
+main > section {
+  display: flex;
+  align-items: center;
+  margin-top: 0 !important;
+}
+
+main > section > * {
+  width: 100%;
+}
+
+.scroll-page {
+  min-height: 100svh;
+}
+
+::selection {
+  background: rgba(255,203,5,0.35);
+}
+
+/* Smooth corners + glass */
+.glass {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--um-maize), #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animated grid backdrop */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(600px 400px at 50% 35%, black 30%, transparent 70%);
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
