@@ -104,7 +104,7 @@
                   <img
                     ref="heroImg"
                     class="h-full w-full object-cover"
-                    src="assets/hero-city.jpg"
+                    :src="`${baseUrl}assets/hero-city.jpg`"
                     alt="MSight concept: AI roadside intelligence at intersections"
                     loading="eager"
                   >
@@ -250,13 +250,15 @@ const longestRotateWord = computed(() => {
   return rotateWords.reduce((a, b) => (a.length > b.length ? a : b), '')
 })
 
+const baseUrl = import.meta.env.BASE_URL
+
 const marqueeProjects = [
-  { name: 'AACE2', logo: '/assets/aace_logo.png' },
-  { name: 'University of Michigan', logo: '/assets/uofm_logo.png' },
-  { name: 'Smart Intersection Project', logo: '/assets/sip_logo.png' },
-  { name: 'P3Mobility', logo: '/assets/p3mobility_logo.jpg' },
-  { name: 'RCOC', logo: '/assets/rcoc_logo.png' },
-  { name: 'Mcity', logo: '/assets/mcity_logo.jpg' },
+  { name: 'AACE2', logo: `${baseUrl}assets/aace_logo.png` },
+  { name: 'University of Michigan', logo: `${baseUrl}assets/uofm_logo.png` },
+  { name: 'Smart Intersection Project', logo: `${baseUrl}assets/sip_logo.png` },
+  { name: 'P3Mobility', logo: `${baseUrl}assets/p3mobility_logo.jpg` },
+  { name: 'RCOC', logo: `${baseUrl}assets/rcoc_logo.png` },
+  { name: 'Mcity', logo: `${baseUrl}assets/mcity_logo.jpg` },
 ]
 
 onMounted(() => {

@@ -53,7 +53,7 @@
             <div class="relative aspect-[21/9] w-full">
               <video
                 class="absolute inset-0 h-full w-full object-cover"
-                data-src="assets/roundabout.mp4"
+                :data-src="`${baseUrl}assets/roundabout.mp4`"
                 autoplay
                 muted
                 loop
@@ -145,6 +145,8 @@
 </template>
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from "vue";
+
+const baseUrl = import.meta.env.BASE_URL;
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 

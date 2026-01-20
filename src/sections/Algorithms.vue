@@ -68,7 +68,7 @@
 
         <div class="relative">
           <div class="glass rounded-3xl overflow-hidden border border-white/10">
-            <img class="w-full h-[520px] object-cover" src="assets/fisheye-roundabout.png" alt="Fisheye roundabout view" loading="lazy" />
+            <img class="w-full h-[520px] object-cover" :src="`${baseUrl}assets/fisheye-roundabout.png`" alt="Fisheye roundabout view" loading="lazy" />
           </div>
 
           <div class="mt-4 grid gap-4 sm:grid-cols-2">
@@ -95,6 +95,8 @@
 
 <script setup>
 import { onMounted } from 'vue'
+
+const baseUrl = import.meta.env.BASE_URL
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 

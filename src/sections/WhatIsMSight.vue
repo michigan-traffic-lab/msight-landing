@@ -48,7 +48,7 @@
 
         <div class="relative">
           <div class="glass rounded-3xl overflow-hidden border border-white/10">
-            <img class="w-full h-[520px] object-cover" src="assets/deployment.png" alt="MSight digital infrastructure overview" loading="lazy" />
+            <img class="w-full h-[520px] object-cover" :src="`${baseUrl}assets/deployment.png`" alt="MSight digital infrastructure overview" loading="lazy" />
           </div>
           <div class="pointer-events-none absolute -bottom-6 -left-6 h-40 w-40 rounded-full bg-[var(--um-maize)]/15 blur-3xl" />
           <div class="pointer-events-none absolute -top-10 -right-10 h-56 w-56 rounded-full bg-[var(--um-blue)]/55 blur-3xl" />
@@ -72,6 +72,8 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
+
+const baseUrl = import.meta.env.BASE_URL
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 
