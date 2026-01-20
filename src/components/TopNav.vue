@@ -5,8 +5,13 @@
         class="glass mt-3 flex items-center justify-between rounded-2xl px-4 py-3 shadow-[var(--shadow)]"
       >
         <a href="#top" class="flex items-center gap-3" @click="(e) => onNavClick(e, 'top')">
-          <div class="h-10 w-10 rounded-xl bg-[var(--um-blue)] grid place-items-center border border-white/10">
-            <span class="font-semibold tracking-tight text-[var(--um-maize)]">M</span>
+          <div class="h-10 w-10 rounded-xl bg-[var(--um-blue)] grid place-items-center border border-white/10 overflow-hidden">
+            <img
+              :src="`${baseUrl}assets/msight-logo.png`"
+              alt="MSight logo"
+              class="h-7 w-7 object-contain"
+              loading="eager"
+            />
           </div>
           <div class="leading-tight">
             <div class="font-semibold tracking-tight">MSight</div>
@@ -56,6 +61,8 @@
 
 <script setup>
 import { Icon } from '@iconify/vue'
+
+const baseUrl = import.meta.env.BASE_URL
 
 const HEADER_OFFSET_PX = 92 // adjust if your header height differs
 
