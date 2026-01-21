@@ -53,12 +53,12 @@
             <div class="relative aspect-[21/9] w-full">
               <video
                 class="absolute inset-0 h-full w-full object-cover"
-                :data-src="`${baseUrl}assets/roundabout.mp4`"
+                :src="`${baseUrl}assets/roundabout.mp4`"
                 autoplay
                 muted
                 loop
                 playsinline
-                preload="none"
+                preload="auto"
               />
 
               <!-- Subtle overlay to keep text legible elsewhere; no yellow strip -->

@@ -1,11 +1,11 @@
 <template>
   <section
     id="architecture"
-    class="mt-24 scroll-mt-24 scroll-page"
+    class="scroll-mt-24 arch-section items-start pt-12"
   >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Header row -->
-      <div class="flex items-end justify-between gap-6 flex-wrap">
+      <div class="flex items-start justify-between gap-6 flex-wrap">
         <div class="max-w-2xl">
           <div class="text-xs uppercase tracking-[0.22em] text-white/60">
             Architecture
@@ -303,6 +303,9 @@ onBeforeUnmount(() => stopAuto());
 </script>
 
 <style scoped>
+.arch-section {
+  min-height: 100svh;
+}
 /* Transitions */
 .fade-enter-active,
 .fade-leave-active {
@@ -330,7 +333,7 @@ onBeforeUnmount(() => stopAuto());
 
 /* Stabilize header height */
 .arch-head-stage {
-  min-height: 128px;
+  min-height: 160px;
 }
 
 /* Image card: light matte on the card */
@@ -414,6 +417,7 @@ onBeforeUnmount(() => stopAuto());
   position: relative;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   padding: 0;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -478,5 +482,9 @@ onBeforeUnmount(() => stopAuto());
   font-weight: 600;
   color: rgba(255, 255, 255, 0.78);
   background: rgba(255, 255, 255, 0.05);
+}
+
+:global(main > section.arch-section) {
+  align-items: flex-start;
 }
 </style>
