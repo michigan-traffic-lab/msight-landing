@@ -5,10 +5,34 @@
   >
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <!-- Header row -->
-      <div class="flex items-start justify-between gap-6 flex-wrap">
-        <div class="max-w-2xl">
+      <div class="grid gap-6 items-start lg:grid-cols-[minmax(0,1.8fr)_auto]">
+        <div class="min-w-0">
           <div class="text-xs uppercase tracking-[0.22em] text-white/60">
             Architecture
+          </div>
+
+          <!-- Tabs (mobile: under section label) -->
+          <div
+            class="arch-tabs mt-3"
+            :style="{ '--tab-index': String(activeIndex) }"
+            @mouseenter="pauseAuto()"
+            @mouseleave="resumeAuto()"
+          >
+            <span
+              class="arch-tab-indicator"
+              aria-hidden="true"
+            />
+
+            <button
+              v-for="t in topics"
+              :key="t.id + '-mobile'"
+              class="arch-tab"
+              :class="active === t.id ? 'is-active' : ''"
+              type="button"
+              @click="setActive(t.id)"
+            >
+              {{ t.tab }}
+            </button>
           </div>
 
           <!-- Fixed-height header stage to prevent shake -->
@@ -26,14 +50,21 @@
                 <p class="mt-4 text-white/75 leading-relaxed">
                   {{ activeTopic.summary }}
                 </p>
+                <a
+                  class="mt-5 inline-flex items-center rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition"
+                  href="https://www.msight-docs.com"
+                >
+                  See documentation
+                  <span class="ml-2 text-white/70">→</span>
+                </a>
               </div>
             </transition>
           </div>
         </div>
 
         <!-- Tabs (sliding pill) -->
-        <div
-          class="arch-tabs"
+        <!-- <div
+          class="arch-tabs hidden lg:flex"
           :style="{ '--tab-index': String(activeIndex) }"
           @mouseenter="pauseAuto()"
           @mouseleave="resumeAuto()"
@@ -53,7 +84,7 @@
           >
             {{ t.tab }}
           </button>
-        </div>
+        </div> -->
       </div>
 
       <!-- Content row -->
@@ -418,6 +449,8 @@ onBeforeUnmount(() => stopAuto());
   display: flex;
   align-items: center;
   align-self: flex-start;
+  width: 100%;
+  max-width: 560px;
   padding: 0;
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);

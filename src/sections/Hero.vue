@@ -1,7 +1,7 @@
 <template>
   <section 
     id="top" 
-    class="relative min-h-[100svh] pt-24 pb-10 overflow-hidden scroll-page"
+    class="relative min-h-[100svh] pt-24 pb-10 overflow-hidden scroll-page hero-page"
   >
     <!-- Background -->
     <div class="pointer-events-none absolute inset-0">
@@ -61,14 +61,14 @@
 
             <p 
               ref="subEl" 
-              class="mt-4 text-base sm:text-lg text-white/75 leading-relaxed max-w-xl"
+              class="mt-4 text-base sm:text-lg text-white/75 leading-relaxed max-w-xl hidden lg:block"
             >
               MSight delivers real-time, AI-driven roadside intelligence by integrating multi-sensor perception, edge compute,
               V2X messaging, and cloud analytics—enabling scalable safety applications, proactive operations, and near-miss understanding.
             </p>
 
-            <!-- CTAs -->
-            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <!-- CTAs (desktop) -->
+            <div class="mt-8 hidden lg:flex flex-col sm:flex-row gap-3">
               <!-- Primary: Get Started -->
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
@@ -131,6 +131,34 @@
             >
               Request demo
             </div>
+          </div>
+
+          <!-- Mobile order: image → CTAs → text -->
+          <div class="lg:hidden">
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a
+                class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
+                href="https://www.msight-docs.com"
+              >
+                <span>Get started</span>
+                <Icon icon="mdi:rocket-launch" class="text-[25px]" />
+              </a>
+
+              <a
+                class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-white/10 hover:bg-white/15 border border-white/10 transition"
+                href="https://github.com/your-org/msight"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>View Source</span>
+                <Icon icon="mdi:github" class="text-[25px]" />
+              </a>
+            </div>
+
+            <p class="mt-5 text-base text-white/75 leading-relaxed max-w-xl">
+              MSight delivers real-time, AI-driven roadside intelligence by integrating multi-sensor perception, edge compute,
+              V2X messaging, and cloud analytics—enabling scalable safety applications, proactive operations, and near-miss understanding.
+            </p>
           </div>
         </div>
         <!-- Row 2 removed: metrics/widgets moved to later sections -->

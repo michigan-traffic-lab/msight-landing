@@ -2,7 +2,7 @@
   <section
     id="performance"
     ref="sectionEl"
-    class="mt-24 scroll-mt-24 scroll-page flex items-center"
+    class="min-h-[100svh] mt-24 scroll-mt-24 scroll-page flex items-center"
   >
     <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="glass rounded-[32px] border border-white/10 overflow-hidden">
@@ -12,7 +12,7 @@
           style="grid-template-rows: auto auto 1fr"
         >
           <!-- Row 1: Header -->
-          <div class="grid gap-6 items-end lg:grid-cols-[minmax(0,5fr)_auto]">
+          <div class="order-2 lg:order-1 grid gap-6 items-end lg:grid-cols-[minmax(0,5fr)_auto]">
             <div class="min-w-0">
               <div class="text-xs uppercase tracking-[0.22em] text-white/60">
                 Performance
@@ -43,13 +43,13 @@
               class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
               href="https://www.msight-docs.com"
             >
-              See how to deploy
+              Request a Demo
               <span class="ml-2 text-white/70">→</span>
             </a>
           </div>
 
           <!-- Row 2: Dedicated wide video row -->
-          <div class="glass rounded-3xl border border-white/10 overflow-hidden">
+          <div class="order-1 lg:order-2 glass rounded-none sm:rounded-3xl border border-white/10 overflow-hidden -mx-6 sm:mx-0">
             <div class="relative aspect-[21/9] w-full">
               <video
                 class="absolute inset-0 h-full w-full object-cover"
@@ -82,7 +82,7 @@
           <!-- Left column: Stats + capability cards -->
           <!-- Row 3: KPI widgets -->
           <div
-            class="grid gap-6 content-start lg:items-stretch lg:grid-cols-4 sm:grid-cols-2"
+            class="order-3 lg:order-3 grid grid-cols-2 gap-6 content-start sm:grid-cols-2 lg:items-stretch lg:grid-cols-4"
           >
             <!-- 1) Latency -->
             <div class="stat glass rounded-3xl p-6 border border-white/10">

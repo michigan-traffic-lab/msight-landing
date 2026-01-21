@@ -5,33 +5,54 @@
     aria-label="Deployments"
   >
     <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="glass rounded-[32px] border border-white/10 overflow-hidden">
-        <!-- 3-row layout: header / media / narrative -->
-        <div class="p-6 sm:p-10 grid gap-6" style="grid-template-rows: auto 1fr auto">
+      <!-- 3-row layout: header / media / narrative -->
+      <div
+        class="deploy-grid grid gap-6"
+        style="grid-template-rows: auto 1fr auto"
+      >
           <!-- Header -->
-          <div class="flex items-end justify-between gap-6 flex-wrap">
-            <div class="w-full">
-              <div class="text-xs uppercase tracking-[0.22em] text-white/60">Deployments</div>
-              <h2 class="mt-3 font-semibold tracking-tight text-3xl sm:text-4xl">
+          <div class="deploy-block grid gap-6 items-end lg:grid-cols-[minmax(0,1.6fr)_auto]">
+            <div class="min-w-0">
+              <div class="text-xs uppercase tracking-[0.22em] text-white/60">
+                Deployments
+              </div>
+              <h2
+                class="mt-3 font-semibold tracking-tight text-3xl sm:text-4xl"
+              >
                 Proven in real-world deployments.
               </h2>
               <p class="mt-4 text-white/75 leading-relaxed">
-                Demonstrated across multiple intersections and operating conditions, including night
-                operations and SPaT-integrated analytics.
+                Demonstrated across multiple intersections and operating
+                conditions, including night operations and SPaT-integrated
+                analytics.
               </p>
             </div>
+
+            <a
+              class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
+              href="https://www.msight-docs.com"
+            >
+              See How to Deploy
+              <span class="ml-2 text-white/70">→</span>
+            </a>
           </div>
 
           <!-- Media Carousel -->
-          <div class="relative">
-            <div class="stage rounded-3xl border border-white/10 overflow-hidden">
+          <div class="deploy-media relative">
+            <div
+              class="stage rounded-3xl border border-white/10 overflow-hidden"
+            >
               <div
                 class="slides"
                 :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
                 aria-live="polite"
               >
                 <!-- Slide 1: 6 deployments (3x2 mosaic in one card) -->
-                <div class="slide" role="group" :aria-label="`Slide 1 of ${slides.length}`">
+                <div
+                  class="slide"
+                  role="group"
+                  :aria-label="`Slide 1 of ${slides.length}`"
+                >
                   <div class="mosaic-card" aria-label="Deployment montage">
                     <div class="mosaic-grid">
                       <video
@@ -42,7 +63,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                       <video
                         class="mosaic-video"
                         :src="`${baseUrl}assets/deploy2.mp4`"
@@ -51,7 +72,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                       <video
                         class="mosaic-video"
                         :src="`${baseUrl}assets/deploy3.mp4`"
@@ -60,7 +81,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                       <video
                         class="mosaic-video"
                         :src="`${baseUrl}assets/deploy4.mp4`"
@@ -69,7 +90,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                       <video
                         class="mosaic-video"
                         :src="`${baseUrl}assets/deploy5.mp4`"
@@ -78,7 +99,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                       <video
                         class="mosaic-video"
                         :src="`${baseUrl}assets/deploy6.mp4`"
@@ -87,13 +108,17 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                     </div>
                   </div>
                 </div>
 
                 <!-- Slide 2: USDOT Intersection Safety Challenge (single video) -->
-                <div class="slide" role="group" :aria-label="`Slide 2 of ${slides.length}`">
+                <div
+                  class="slide"
+                  role="group"
+                  :aria-label="`Slide 2 of ${slides.length}`"
+                >
                   <div class="mediaGrid grid-1">
                     <div class="tile">
                       <video
@@ -104,13 +129,17 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                     </div>
                   </div>
                 </div>
 
                 <!-- Slide 3: SPaT integration (3-up) -->
-                <div class="slide" role="group" :aria-label="`Slide 3 of ${slides.length}`">
+                <div
+                  class="slide"
+                  role="group"
+                  :aria-label="`Slide 3 of ${slides.length}`"
+                >
                   <div class="mediaGrid grid-3">
                     <div class="tile">
                       <video
@@ -121,7 +150,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                     </div>
                     <div class="tile">
                       <video
@@ -132,7 +161,7 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                     </div>
                     <div class="tile">
                       <video
@@ -143,17 +172,27 @@
                         autoplay
                         loop
                         preload="metadata"
-                      ></video>
+                      />
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- Arrows -->
-              <button class="navBtn left" type="button" aria-label="Previous slide" @click="prev">
+              <button
+                class="navBtn left"
+                type="button"
+                aria-label="Previous slide"
+                @click="prev"
+              >
                 <span aria-hidden="true">‹</span>
               </button>
-              <button class="navBtn right" type="button" aria-label="Next slide" @click="next">
+              <button
+                class="navBtn right"
+                type="button"
+                aria-label="Next slide"
+                @click="next"
+              >
                 <span aria-hidden="true">›</span>
               </button>
 
@@ -175,11 +214,15 @@
           </div>
 
           <!-- Narrative row -->
-          <div class="mt-2">
+          <div class="deploy-block">
             <transition name="fade" mode="out-in">
               <div :key="activeIndex">
-                <div class="text-lg sm:text-xl font-semibold">{{ slides[activeIndex].title }}</div>
-                <p class="mt-3 text-base sm:text-lg text-white/75 leading-relaxed">
+                <div class="text-lg sm:text-xl font-semibold">
+                  {{ slides[activeIndex].title }}
+                </div>
+                <p
+                  class="mt-3 text-base sm:text-lg text-white/75 leading-relaxed"
+                >
                   {{ slides[activeIndex].description }}
                   <a
                     v-if="slides[activeIndex].linkUrl"
@@ -188,7 +231,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {{ slides[activeIndex].linkLabel || 'Read more →' }}
+                    {{ slides[activeIndex].linkLabel || "Read more →" }}
                   </a>
                 </p>
 
@@ -196,7 +239,11 @@
                   v-if="slides[activeIndex].bullets?.length"
                   class="mt-4 grid gap-2 text-base sm:text-lg text-white/70"
                 >
-                  <li v-for="(b, idx) in slides[activeIndex].bullets" :key="idx" class="bullet">
+                  <li
+                    v-for="(b, idx) in slides[activeIndex].bullets"
+                    :key="idx"
+                    class="bullet"
+                  >
                     <span class="dotMini" aria-hidden="true"></span>
                     <span>{{ b }}</span>
                   </li>
@@ -204,8 +251,6 @@
               </div>
             </transition>
           </div>
-
-        </div>
       </div>
     </div>
   </section>
@@ -299,6 +344,14 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+.deploy-block {
+  margin: 24px;
+}
+
+.deploy-media {
+  margin: 24px;
+}
+
 /* Stage keeps a very wide look to match “wider-than-landscape” videos */
 .stage {
   position: relative;
@@ -338,7 +391,7 @@ onBeforeUnmount(() => {
   height: 100%;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
@@ -373,12 +426,35 @@ onBeforeUnmount(() => {
   }
 }
 
+@media (max-width: 640px) {
+  .deploy-block {
+    margin: 20px;
+  }
+
+  .deploy-media {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .stage {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .slide {
+    padding: 0;
+  }
+}
+
 /* Video tile */
 .tile {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.04);
   box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
@@ -404,7 +480,9 @@ onBeforeUnmount(() => {
   display: grid;
   place-items: center;
   cursor: pointer;
-  transition: background 160ms ease, transform 160ms ease;
+  transition:
+    background 160ms ease,
+    transform 160ms ease;
   backdrop-filter: blur(10px);
 }
 .navBtn:hover {
@@ -443,7 +521,10 @@ onBeforeUnmount(() => {
   border: 1px solid rgba(255, 255, 255, 0.22);
   background: rgba(255, 255, 255, 0.18);
   cursor: pointer;
-  transition: transform 160ms ease, background 160ms ease, width 160ms ease;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    width 160ms ease;
 }
 .dot.active {
   width: 26px;
