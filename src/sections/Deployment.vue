@@ -10,247 +10,253 @@
         class="deploy-grid grid gap-6"
         style="grid-template-rows: auto 1fr auto"
       >
-          <!-- Header -->
-          <div class="deploy-block grid gap-6 items-end lg:grid-cols-[minmax(0,1.6fr)_auto]">
-            <div class="min-w-0">
-              <div class="text-xs uppercase tracking-[0.22em] text-white/60">
-                Deployments
-              </div>
-              <h2
-                class="mt-3 font-semibold tracking-tight text-3xl sm:text-4xl"
-              >
-                Proven in real-world deployments.
-              </h2>
-              <p class="mt-4 text-white/75 leading-relaxed">
-                Demonstrated across multiple intersections and operating
-                conditions, including night operations and SPaT-integrated
-                analytics.
-              </p>
+        <!-- Header -->
+        <div
+          class="deploy-block grid gap-6 items-end lg:grid-cols-[minmax(0,1.6fr)_auto]"
+        >
+          <div class="min-w-0">
+            <div class="text-xs uppercase tracking-[0.22em] text-white/60">
+              Deployments
             </div>
-
-            <a
-              class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
-              href="https://www.msight-docs.com"
-            >
-              See How to Deploy
-              <span class="ml-2 text-white/70">→</span>
-            </a>
+            <h2 class="mt-3 font-semibold tracking-tight text-3xl sm:text-4xl">
+              Proven in real-world deployments.
+            </h2>
+            <p class="mt-4 text-white/75 leading-relaxed">
+              Demonstrated across multiple intersections and operating
+              conditions, including night operations and SPaT-integrated
+              analytics.
+            </p>
           </div>
 
-          <!-- Media Carousel -->
-          <div class="deploy-media relative">
+          <a
+            class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
+            href="https://www.msight-docs.com"
+          >
+            See How to Deploy
+            <span class="ml-2 text-white/70">→</span>
+          </a>
+        </div>
+
+        <!-- Media Carousel -->
+        <div class="deploy-media relative">
+          <div class="stage rounded-3xl border border-white/10 overflow-hidden">
             <div
-              class="stage rounded-3xl border border-white/10 overflow-hidden"
+              class="slides"
+              :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
+              aria-live="polite"
             >
+              <!-- Slide 1: 6 deployments (3x2 mosaic in one card) -->
               <div
-                class="slides"
-                :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
-                aria-live="polite"
+                class="slide"
+                role="group"
+                :aria-label="`Slide 1 of ${slides.length}`"
               >
-                <!-- Slide 1: 6 deployments (3x2 mosaic in one card) -->
-                <div
-                  class="slide"
-                  role="group"
-                  :aria-label="`Slide 1 of ${slides.length}`"
-                >
-                  <div class="mosaic-card" aria-label="Deployment montage">
-                    <div class="mosaic-grid">
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy1.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy2.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy3.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy4.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy5.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                      <video
-                        class="mosaic-video"
-                        :src="`${baseUrl}assets/deploy6.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 2: USDOT Intersection Safety Challenge (single video) -->
-                <div
-                  class="slide"
-                  role="group"
-                  :aria-label="`Slide 2 of ${slides.length}`"
-                >
-                  <div class="mediaGrid grid-1">
-                    <div class="tile">
-                      <video
-                        class="video"
-                        :src="`${baseUrl}assets/regular.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Slide 3: SPaT integration (3-up) -->
-                <div
-                  class="slide"
-                  role="group"
-                  :aria-label="`Slide 3 of ${slides.length}`"
-                >
-                  <div class="mediaGrid grid-3">
-                    <div class="tile">
-                      <video
-                        class="video"
-                        :src="`${baseUrl}assets/spat1.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                    </div>
-                    <div class="tile">
-                      <video
-                        class="video"
-                        :src="`${baseUrl}assets/spat2.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                    </div>
-                    <div class="tile">
-                      <video
-                        class="video"
-                        :src="`${baseUrl}assets/spat3.mp4`"
-                        muted
-                        playsinline
-                        autoplay
-                        loop
-                        preload="metadata"
-                      />
-                    </div>
+                <div class="mosaic-card" aria-label="Deployment montage">
+                  <div class="mosaic-grid">
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy1.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy2.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy3.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy4.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy5.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                    <video
+                      class="mosaic-video"
+                      :src="`${baseUrl}assets/deploy6.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
                   </div>
                 </div>
               </div>
 
-              <!-- Arrows -->
-              <button
-                class="navBtn left"
-                type="button"
-                aria-label="Previous slide"
-                @click="prev"
+              <!-- Slide 2: USDOT Intersection Safety Challenge (single video) -->
+              <div
+                class="slide"
+                role="group"
+                :aria-label="`Slide 2 of ${slides.length}`"
               >
-                <span aria-hidden="true">‹</span>
-              </button>
-              <button
-                class="navBtn right"
-                type="button"
-                aria-label="Next slide"
-                @click="next"
-              >
-                <span aria-hidden="true">›</span>
-              </button>
+                <div class="mediaGrid grid-1">
+                  <div class="tile">
+                    <video
+                      class="video"
+                      :src="`${baseUrl}assets/regular.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                  </div>
+                </div>
+              </div>
 
-              <!-- Dots -->
-              <div class="dots" role="tablist" aria-label="Deployment slides">
-                <button
-                  v-for="(s, i) in slides"
-                  :key="s.key"
-                  class="dot"
-                  :class="{ active: i === activeIndex }"
-                  type="button"
-                  role="tab"
-                  :aria-selected="i === activeIndex"
-                  :aria-label="`Go to slide ${i + 1}`"
-                  @click="go(i)"
-                />
+              <!-- Slide 3: SPaT integration (3-up) -->
+              <div
+                class="slide"
+                role="group"
+                :aria-label="`Slide 3 of ${slides.length}`"
+              >
+                <div class="mediaGrid grid-3">
+                  <div class="tile">
+                    <video
+                      class="video"
+                      :src="`${baseUrl}assets/spat1.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                  </div>
+                  <div class="tile">
+                    <video
+                      class="video"
+                      :src="`${baseUrl}assets/spat2.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                  </div>
+                  <div class="tile">
+                    <video
+                      class="video"
+                      :src="`${baseUrl}assets/spat3.mp4`"
+                      muted
+                      playsinline
+                      autoplay
+                      loop
+                      preload="metadata"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Arrows -->
+            <button
+              class="navBtn left"
+              type="button"
+              aria-label="Previous slide"
+              @click="prev"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              class="navBtn right"
+              type="button"
+              aria-label="Next slide"
+              @click="next"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+
+            <!-- Dots -->
+            <div
+              class="dots"
+              role="tablist"
+              aria-label="Deployment slides"
+            >
+              <button
+                v-for="(s, i) in slides"
+                :key="s.key"
+                class="dot"
+                :class="{ active: i === activeIndex }"
+                type="button"
+                role="tab"
+                :aria-selected="i === activeIndex"
+                :aria-label="`Go to slide ${i + 1}`"
+                @click="go(i)"
+              />
+            </div>
           </div>
+        </div>
 
-          <!-- Narrative row -->
-          <div class="deploy-block">
-            <transition name="fade" mode="out-in">
-              <div :key="activeIndex">
-                <div class="text-lg sm:text-xl font-semibold">
-                  {{ slides[activeIndex].title }}
-                </div>
-                <p
-                  class="mt-3 text-base sm:text-lg text-white/75 leading-relaxed"
-                >
-                  {{ slides[activeIndex].description }}
-                  <a
-                    v-if="slides[activeIndex].linkUrl"
-                    class="ml-2 underline underline-offset-4 text-[var(--um-maize)] hover:text-[var(--um-maize)]/90 transition"
-                    :href="slides[activeIndex].linkUrl"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {{ slides[activeIndex].linkLabel || "Read more →" }}
-                  </a>
-                </p>
-
-                <ul
-                  v-if="slides[activeIndex].bullets?.length"
-                  class="mt-4 grid gap-2 text-base sm:text-lg text-white/70"
-                >
-                  <li
-                    v-for="(b, idx) in slides[activeIndex].bullets"
-                    :key="idx"
-                    class="bullet"
-                  >
-                    <span class="dotMini" aria-hidden="true"></span>
-                    <span>{{ b }}</span>
-                  </li>
-                </ul>
+        <!-- Narrative row -->
+        <div class="deploy-block">
+          <transition
+            name="fade"
+            mode="out-in"
+          >
+            <div :key="activeIndex">
+              <div class="text-lg sm:text-xl font-semibold">
+                {{ slides[activeIndex].title }}
               </div>
-            </transition>
-          </div>
+              <p class="mt-3 text-base sm:text-lg text-white/75 leading-relaxed">
+                {{ slides[activeIndex].description }}
+                <a
+                  v-if="slides[activeIndex].linkUrl"
+                  class="ml-2 underline underline-offset-4 text-[var(--um-maize)] hover:text-[var(--um-maize)]/90 transition"
+                  :href="slides[activeIndex].linkUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ slides[activeIndex].linkLabel || "Read more →" }}
+                </a>
+              </p>
+
+              <ul
+                v-if="slides[activeIndex].bullets?.length"
+                class="mt-4 grid gap-2 text-base sm:text-lg text-white/70"
+              >
+                <li
+                  v-for="(b, idx) in slides[activeIndex].bullets"
+                  :key="idx"
+                  class="bullet"
+                >
+                  <span
+                    class="dotMini"
+                    aria-hidden="true"
+                  />
+                  <span>{{ b }}</span>
+                </li>
+              </ul>
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
   </section>
