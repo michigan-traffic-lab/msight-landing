@@ -39,7 +39,9 @@
               <div class="mb-7 flex flex-col sm:flex-row gap-3">
                 <a
                   class="cta cta-secondary"
-                  href="#"
+                  href="https://msight-user-docs.readthedocs.io/en/latest/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span
                     class="icon"

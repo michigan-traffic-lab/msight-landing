@@ -84,7 +84,7 @@
               <!-- Primary: Get Started -->
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-                href="https://www.msight-docs.com"
+                href="https://msight-user-docs.readthedocs.io/en/latest/"
               >
                 <span>Get started</span>
                 <!-- Material icon -->

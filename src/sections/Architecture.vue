@@ -52,7 +52,9 @@
                 </p>
                 <a
                   class="mt-5 inline-flex items-center rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition"
-                  href="https://www.msight-docs.com"
+                  href="https://msight-user-docs.readthedocs.io/en/latest/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   See documentation
                   <span class="ml-2 text-white/70">→</span>
