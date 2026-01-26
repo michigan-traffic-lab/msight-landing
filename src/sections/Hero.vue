@@ -85,6 +85,8 @@
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
                 href="https://msight-user-docs.readthedocs.io/en/latest/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span>Get started</span>
                 <!-- Material icon -->
@@ -165,7 +167,9 @@
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-                href="https://www.msight-docs.com"
+                href="https://msight-user-docs.readthedocs.io/en/latest/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span>Get started</span>
                 <Icon
@@ -181,7 +185,10 @@
                 rel="noopener noreferrer"
               >
                 <span>View Source</span>
-                <Icon icon="mdi:github" class="text-[25px]" />
+                <Icon
+                  icon="mdi:github"
+                  class="text-[25px]"
+                />
               </a>
             </div>
 

@@ -4,14 +4,18 @@
       <div
         class="glass mt-3 flex items-center justify-between rounded-2xl px-4 py-3 shadow-[var(--shadow)]"
       >
-        <a href="#top" class="flex items-center gap-3" @click="(e) => onNavClick(e, 'top')">
+        <a
+          href="#top"
+          class="flex items-center gap-3"
+          @click="(e) => onNavClick(e, 'top')"
+        >
           <div class="h-10 w-10 rounded-xl bg-[var(--um-blue)] grid place-items-center border border-white/10 overflow-hidden">
             <img
               :src="`${baseUrl}assets/msight-logo.png`"
               alt="MSight logo"
               class="h-7 w-7 object-contain"
               loading="eager"
-            />
+            >
           </div>
           <div class="leading-tight">
             <div class="font-semibold tracking-tight">MSight</div>
@@ -20,21 +24,44 @@
         </a>
 
         <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
-          <a class="hover:text-white transition" href="#performance" @click="(e) => onNavClick(e, 'performance')">Performance</a>
-          <a class="hover:text-white transition" href="#deployments" @click="(e) => onNavClick(e, 'deployments')">Deployments</a>
-          <a class="hover:text-white transition" href="#architecture" @click="(e) => onNavClick(e, 'architecture')">Architecture</a>
-          <a class="hover:text-white transition" href="#development" @click="(e) => onNavClick(e, 'development')">Development</a>
-          <a class="hover:text-white transition" href="#faq" @click="(e) => onNavClick(e, 'faq')">FAQ</a>
-</nav>
+          <a
+            class="hover:text-white transition"
+            href="#performance"
+            @click="(e) => onNavClick(e, 'performance')"
+          >Performance</a>
+          <a
+            class="hover:text-white transition"
+            href="#deployments"
+            @click="(e) => onNavClick(e, 'deployments')"
+          >Deployments</a>
+          <a
+            class="hover:text-white transition"
+            href="#architecture"
+            @click="(e) => onNavClick(e, 'architecture')"
+          >Architecture</a>
+          <a
+            class="hover:text-white transition"
+            href="#development"
+            @click="(e) => onNavClick(e, 'development')"
+          >Development</a>
+          <a
+            class="hover:text-white transition"
+            href="#faq"
+            @click="(e) => onNavClick(e, 'faq')"
+          >FAQ</a>
+        </nav>
 
-<div class="flex items-center gap-2">
+        <div class="flex items-center gap-2">
           <a
             class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 transition"
             href="#demo"
             @click="(e) => onNavClick(e, 'demo')"
           >
             Ask for Demo
-            <Icon icon="mdi:calendar-clock" class="text-[18px] text-white/70" />
+            <Icon
+              icon="mdi:calendar-clock"
+              class="text-[18px] text-white/70"
+            />
           </a>
           <a
             class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition nav-github"
@@ -47,11 +74,17 @@
           </a>
           <a
             class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-            href="#get-started"
-            @click="(e) => onNavClick(e, 'get-started')"
+            href="https://msight-user-docs.readthedocs.io/en/latest/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Get started
-            <span><Icon icon="mdi:rocket-launch" class="text-[25px]" /></span>
+            <span>
+              <Icon
+                icon="mdi:rocket-launch"
+                class="text-[25px]"
+              />
+            </span>
           </a>
         </div>
       </div>
