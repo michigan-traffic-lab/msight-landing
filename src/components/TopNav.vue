@@ -65,7 +65,7 @@
           </a>
           <a
             class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition nav-github"
-            href="https://github.com/your-org/msight"
+            href="https://github.com/michigan-traffic-lab/MSight"
             target="_blank"
             rel="noopener noreferrer"
           >

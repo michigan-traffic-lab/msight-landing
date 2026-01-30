@@ -54,7 +54,7 @@
 
                 <a
                   class="cta cta-primary"
-                  href="#"
+                  href="https://github.com/michigan-traffic-lab/MSight"
                 >
                   <span
                     class="icon"
@@ -67,7 +67,7 @@
 
                 <a
                   class="cta cta-tertiary"
-                  href="#"
+                  href="https://hub.docker.com/repository/docker/michigantrafficlab/msight-core/general"
                 >
                   <span
                     class="icon"
