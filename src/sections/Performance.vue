@@ -30,7 +30,7 @@
                 Safety Challenge.
                 <a
                   class="ml-2 underline underline-offset-4 text-white/80 hover:text-white transition"
-                  href="https://www.transportation.gov/briefing-room/us-dot-announces-winners-intersection-safety-challenge-stage-1b-system-assessment-and"
+                  :href="urls.usdotISC"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -40,8 +40,9 @@
             </div>
 
             <a
-              class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
-              href="https://www.msight-docs.com"
+              class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end cursor-pointer"
+              href="#demo"
+              @click="openDemoModal"
             >
               Request a Demo
               <span class="ml-2 text-white/70">→</span>
@@ -141,10 +142,18 @@
         <!-- Removed the old bottom gradient strip entirely -->
       </div>
     </div>
+
+    <DemoRequestModal
+      v-model="showDemoModal"
+      @cancel="handleDemoCancel"
+      @submit="handleDemoSubmit"
+    />
   </section>
 </template>
 <script setup>
 import { onMounted, onBeforeUnmount, ref } from "vue";
+import { urls } from "@/config/urls.js";
+import DemoRequestModal from "@/components/DemoRequestModal.vue";
 
 const baseUrl = import.meta.env.BASE_URL;
 import gsap from "gsap";
@@ -154,6 +163,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const sectionEl = ref(null);
 let triggers = [];
+
+const showDemoModal = ref(false);
+
+const openDemoModal = (e) => {
+  e.preventDefault();
+  showDemoModal.value = true;
+};
+
+const handleDemoCancel = () => {
+  console.log("Demo modal cancelled");
+};
+
+const handleDemoSubmit = (formData) => {
+  console.log("Demo form submitted:", formData);
+};
 
 function computeDaysSince(isoDateString) {
   // Use local time; stable enough for a KPI counter.

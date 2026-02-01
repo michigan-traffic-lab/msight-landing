@@ -84,7 +84,7 @@
               <!-- Primary: Get Started -->
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-                href="https://msight-user-docs.readthedocs.io/en/latest/"
+                :href="urls.documentation"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -99,7 +99,7 @@
               <!-- Secondary: GitHub -->
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-white/10 hover:bg-white/15 border border-white/10 transition"
-                href="https://github.com/your-org/msight"
+                :href="urls.github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -167,7 +167,7 @@
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-                href="https://msight-user-docs.readthedocs.io/en/latest/"
+                :href="urls.documentation"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -180,7 +180,7 @@
 
               <a
                 class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold bg-white/10 hover:bg-white/15 border border-white/10 transition"
-                href="https://github.com/michigan-traffic-lab/MSight"
+                :href="urls.github"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -290,6 +290,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 import { Icon } from "@iconify/vue";
+import { urls } from "@/config/urls.js";
 
 gsap.registerPlugin(ScrollTrigger);
 

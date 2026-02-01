@@ -29,31 +29,31 @@
           <div class="text-sm font-semibold">Documentation</div>
           <ul class="mt-3 space-y-2 text-sm text-white/70">
             <li>
-              <a class="inline-flex items-center gap-2 hover:text-white" href="https://github.com/umich-msight/msight" target="_blank" rel="noopener noreferrer">
+              <a class="inline-flex items-center gap-2 hover:text-white" :href="urls.github" target="_blank" rel="noopener noreferrer">
                 <Icon icon="mdi:github" class="text-[16px] text-white/70" />
                 GitHub
               </a>
             </li>
             <li>
-              <a class="inline-flex items-center gap-2 hover:text-white" href="https://hub.docker.com/r/umich-msight/msight" target="_blank" rel="noopener noreferrer">
+              <a class="inline-flex items-center gap-2 hover:text-white" :href="urls.dockerHub" target="_blank" rel="noopener noreferrer">
                 <Icon icon="mdi:docker" class="text-[16px] text-white/70" />
                 Docker Hub
               </a>
             </li>
             <li>
-              <a class="inline-flex items-center gap-2 hover:text-white" href="https://some-link.com" target="_blank" rel="noopener noreferrer">
+              <a class="inline-flex items-center gap-2 hover:text-white" :href="urls.documentation" target="_blank" rel="noopener noreferrer">
                 <Icon icon="mdi:file-document-outline" class="text-[16px] text-white/70" />
                 Documentation
               </a>
             </li>
             <li>
-              <a class="inline-flex items-center gap-2 hover:text-white" href="https://some-link.com" target="_blank" rel="noopener noreferrer">
+              <a class="inline-flex items-center gap-2 hover:text-white" :href="urls.quickStart" target="_blank" rel="noopener noreferrer">
                 <Icon icon="mdi:flash" class="text-[16px] text-white/70" />
                 Quick Start
               </a>
             </li>
             <li>
-              <a class="inline-flex items-center gap-2 hover:text-white" href="https://some-link.com" target="_blank" rel="noopener noreferrer">
+              <a class="inline-flex items-center gap-2 hover:text-white" :href="urls.tutorials" target="_blank" rel="noopener noreferrer">
                 <Icon icon="mdi:school" class="text-[16px] text-white/70" />
                 Tutorials
               </a>
@@ -88,6 +88,7 @@
 
 <script setup>
 import { Icon } from '@iconify/vue'
+import { urls } from "@/config/urls.js";
 
 const year = new Date().getFullYear()
 </script>

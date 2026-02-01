@@ -55,7 +55,7 @@
           <a
             class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-white/10 hover:bg-white/15 border border-white/10 transition"
             href="#demo"
-            @click="(e) => onNavClick(e, 'demo')"
+            @click="openDemoModal"
           >
             Ask for Demo
             <Icon
@@ -65,7 +65,7 @@
           </a>
           <a
             class="hidden sm:inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition nav-github"
-            href="https://github.com/michigan-traffic-lab/MSight"
+            :href="urls.github"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -74,7 +74,7 @@
           </a>
           <a
             class="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold bg-[var(--um-maize)] text-black hover:brightness-105 transition"
-            href="https://msight-user-docs.readthedocs.io/en/latest/"
+            :href="urls.documentation"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -89,13 +89,37 @@
         </div>
       </div>
     </div>
+
+    <DemoRequestModal
+      v-model="showDemoModal"
+      @cancel="handleDemoCancel"
+      @submit="handleDemoSubmit"
+    />
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { Icon } from '@iconify/vue'
+import { urls } from "@/config/urls.js";
+import DemoRequestModal from "@/components/DemoRequestModal.vue";
 
 const baseUrl = import.meta.env.BASE_URL
+
+const showDemoModal = ref(false)
+
+const openDemoModal = (e) => {
+  e.preventDefault()
+  showDemoModal.value = true
+}
+
+const handleDemoCancel = () => {
+  console.log('Demo modal cancelled')
+}
+
+const handleDemoSubmit = (formData) => {
+  console.log('Demo form submitted:', formData)
+}
 
 const HEADER_OFFSET_PX = 92 // adjust if your header height differs
 

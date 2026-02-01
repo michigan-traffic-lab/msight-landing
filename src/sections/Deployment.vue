@@ -30,7 +30,9 @@
 
           <a
             class="rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition justify-self-start lg:justify-self-end"
-            href="https://www.msight-docs.com"
+            :href="urls.requestDemo"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             See How to Deploy
             <span class="ml-2 text-white/70">→</span>
@@ -264,6 +266,7 @@
 
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from "vue";
+import { urls } from "@/config/urls.js";
 
 const baseUrl = import.meta.env.BASE_URL;
 
@@ -287,8 +290,7 @@ const slides = [
     title: "USDOT Intersection Safety Challenge (Tier 1 award)",
     description:
       "MSight received a Tier 1 award (highest) in the USDOT Intersection Safety Challenge (Stage 1B: System Assessment and Evaluation).",
-    linkUrl:
-      "https://www.transportation.gov/briefing-room/us-dot-announces-winners-intersection-safety-challenge-stage-1b-system-assessment-and",
+    linkUrl: urls.usdotISC,
     linkLabel: "USDOT Official announcement →",
     bullets: [
       "Tier 1 (highest) award recognition",

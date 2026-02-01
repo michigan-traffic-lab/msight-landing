@@ -39,7 +39,7 @@
               <div class="mb-7 flex flex-col sm:flex-row gap-3">
                 <a
                   class="cta cta-secondary"
-                  href="https://msight-user-docs.readthedocs.io/en/latest/"
+                  :href="urls.documentation"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -54,7 +54,9 @@
 
                 <a
                   class="cta cta-primary"
-                  href="https://github.com/michigan-traffic-lab/MSight"
+                  :href="urls.github"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span
                     class="icon"
@@ -67,7 +69,9 @@
 
                 <a
                   class="cta cta-tertiary"
-                  href="https://hub.docker.com/repository/docker/michigantrafficlab/msight-core/general"
+                  :href="urls.dockerHub"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <span
                     class="icon"
@@ -250,6 +254,7 @@
 
 <script setup>
 import { Icon } from "@iconify/vue";
+import { urls } from "@/config/urls.js";
 </script>
 
 <style scoped>

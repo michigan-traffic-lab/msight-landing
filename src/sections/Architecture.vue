@@ -52,7 +52,7 @@
                 </p>
                 <a
                   class="mt-5 inline-flex items-center rounded-2xl px-5 py-3 font-semibold bg-[var(--um-blue)]/60 hover:bg-[var(--um-blue)]/70 border border-white/10 transition"
-                  href="https://msight-user-docs.readthedocs.io/en/latest/"
+                  :href="urls.documentation"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -180,6 +180,7 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import { urls } from "@/config/urls.js";
 // const asset = (p) => new URL(p.replace(/^\//, ""), import.meta.env.BASE_URL).toString();
 const topics = [
   {
