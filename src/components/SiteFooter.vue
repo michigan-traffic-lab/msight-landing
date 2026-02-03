@@ -69,7 +69,7 @@
             <li class="text-xs text-white/60">Lead Developer</li>
             <li class="text-xs text-white/60">University of Michigan, Ann Arbor</li>
             <li><a class="hover:text-white" href="mailto:rushengz@umich.edu">rushengz@umich.edu</a></li>
-            <li><a class="hover:text-white" href="#">Press kit (placeholder)</a></li>
+            <!-- <li><a class="hover:text-white" href="#">Press kit (placeholder)</a></li> -->
           </ul>
         </div>
       </div>
@@ -77,9 +77,9 @@
       <div class="mt-10 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-xs text-white/60">
         <div>© {{ year }} MSight. All rights reserved.</div>
         <div class="flex gap-4">
-          <a class="hover:text-white" href="#">Privacy (placeholder)</a>
-          <a class="hover:text-white" href="#">Security (placeholder)</a>
-          <a class="hover:text-white" href="#">License (placeholder)</a>
+          <a class="hover:text-white" href="https://www.engin.umich.edu/privacy-policies/" target="_blank" rel="noopener noreferrer">Privacy</a>
+          <a class="hover:text-white" href="https://safety.engin.umich.edu/" target="_blank" rel="noopener noreferrer">Security</a>
+          <a class="hover:text-white" href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">License</a>
         </div>
       </div>
     </div>
