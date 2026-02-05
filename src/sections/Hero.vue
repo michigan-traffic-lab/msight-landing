@@ -24,11 +24,17 @@
         <div class="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <!-- LEFT -->
           <div class="relative">
-            <div
-              class="hidden sm:inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs text-white/80"
-            >
-              <span class="h-2 w-2 rounded-full bg-[var(--um-maize)]" />
-              <span>Open-source</span>
+            <div class="hidden sm:flex items-center gap-3">
+              <div
+                class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs text-white/80"
+              >
+                <img
+                  :src="`${baseUrl}assets/uofm_logo.png`"
+                  alt="University of Michigan"
+                  class="h-4 w-auto"
+                >
+                <span>Open-source</span>
+              </div>
             </div>
 
             <h1

@@ -5,11 +5,17 @@
         <div class="self-center">
           <div class="flex items-center gap-3">
             <div class="h-10 w-10 rounded-xl bg-[var(--um-blue)] grid place-items-center border border-white/10">
-              <span class="font-semibold tracking-tight text-[var(--um-maize)]">M</span>
+              <img
+                :src="`${baseUrl}assets/uofm_logo.png`"
+                alt="University of Michigan logo"
+                class="h-7 w-7 object-contain"
+              >
             </div>
             <div>
               <div class="font-semibold">MSight</div>
-              <div class="text-xs text-white/70">Open-source roadside intelligence system</div>
+              <div class="text-xs text-white/70"> 
+                A project by University of Michigan 
+              </div>
             </div>
           </div>
         </div>
@@ -90,5 +96,6 @@
 import { Icon } from '@iconify/vue'
 import { urls } from "@/config/urls.js";
 
+const baseUrl = import.meta.env.BASE_URL
 const year = new Date().getFullYear()
 </script>
