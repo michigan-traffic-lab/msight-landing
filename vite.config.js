@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue(), tailwindcss()],
-  base: '/msight-landing/', // must match repo name
+  base: '/', // root path for production deployment
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
